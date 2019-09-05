@@ -1,2 +1,2 @@
-export const SEARCHBYCOMMITTEE = '/searchbycommittee';
+export const DONUT = '/donut';
 export const SEARCHBYCANDIDATE = '/searchbycandidate';

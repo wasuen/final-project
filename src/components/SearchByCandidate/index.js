@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Donut from '../Donut'
 
 class SearchByCandidate extends Component {
 
@@ -32,11 +33,12 @@ class SearchByCandidate extends Component {
                   <input name='search' type='text' onChange={this.onChange}/>
                   <button type='submit'>submit</button>
                 </form>
-                {
+                {/* {
                   this.state.results.map((m,i) => 
                   <div key={i}>{m.employer} contributed {m.count} times, totaling in {m.total} for year {m.cycle}</div>
                   )
-                }
+                } */}
+                <Donut results={this.state.results} />
               </div>
         )
     }

@@ -3,8 +3,8 @@ import { Route, Switch } from 'react-router-dom'
 
 
 import Navigation from '../Navigation'
-import SearchByCommittee from '../SearchByCommittee';
 import SearchByCandidate from '../SearchByCandidate'
+import Donut from '../Donut'
 import * as ROUTES from '../../constants/routes'
 
 
@@ -15,6 +15,7 @@ class App extends Component {
                 <Navigation />
                 <Switch>
                     <Route exact path = {ROUTES.SEARCHBYCANDIDATE} render ={() => <SearchByCandidate />} />
+                    <Route exact path = {ROUTES.DONUT} render = {() => <Donut />} />
                 </Switch>
             </div>
         )
