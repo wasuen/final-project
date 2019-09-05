@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
-class Navigation extends Component {
-    render() {
-        return(
-            <div>Navigation</div>
-        )
-    }
-}
+import * as ROUTES from '../../constants/routes'
+
+const Navigation= () => (
+    <ul>
+        <li>
+            <NavLink exact to={ROUTES.SEARCHBYCANDIDATE}>Search By Candidate</NavLink>
+        </li>
+    </ul>
+)
 
 export default Navigation

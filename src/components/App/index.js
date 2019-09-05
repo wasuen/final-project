@@ -3,10 +3,10 @@ import { Route, Switch } from 'react-router-dom'
 
 
 import Navigation from '../Navigation'
-import HomePage from '../SearchByCommittee'
-
-import * as ROUTES from '../../constants/routes'
 import SearchByCommittee from '../SearchByCommittee';
+import SearchByCandidate from '../SearchByCandidate'
+import * as ROUTES from '../../constants/routes'
+
 
 class App extends Component {
     render() {
@@ -14,7 +14,7 @@ class App extends Component {
             <div>
                 <Navigation />
                 <Switch>
-                    <Route exact path = {ROUTES.SEARCHBYCOMMITTEE} render ={() => <SearchByCommittee />} />
+                    <Route exact path = {ROUTES.SEARCHBYCANDIDATE} render ={() => <SearchByCandidate />} />
                 </Switch>
             </div>
         )
