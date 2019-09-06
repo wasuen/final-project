@@ -1,2 +1,3 @@
 export const DONUT = '/donut';
-export const SEARCHBYCANDIDATE = '/searchbycandidate';
+export const SEARCHCONTRIBUTIONS = '/searchcontributions';
+export const SEARCHDISBURSEMENTS = '/searchdisbursements';
