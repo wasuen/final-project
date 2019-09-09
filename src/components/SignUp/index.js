@@ -26,7 +26,7 @@ class SignUpFormBase extends Component {
         const { username, email, passwordOne } = this.state
         event.preventDefault()
         this.props.firebase
-        .doCreateUser(email, passwordOne)
+        .doCreateUserWithEmailAndPassword(email, passwordOne)
         .then(authUser => {
           return this.props.firebase.db.collection('users').doc(authUser.user.uid).set({
             username,
