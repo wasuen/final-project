@@ -39,7 +39,7 @@ class Donut extends Component {
             <div>
                 {this.props.search && this.props.search === this.props.submitted ?
                     <div className={style.canvas}>
-                        <h1>{this.props.search}</h1>
+                        <h3 className='candidate-name'>{this.props.search}</h3>
                         <Doughnut data={this.dataHandler(this.props)} />
                     </div>
                     : (

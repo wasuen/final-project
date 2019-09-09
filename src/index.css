@@ -14,7 +14,7 @@ code {
 
 .routes {
   text-decoration: none;
-  color: black;
+  color: #2c387e;
 }
 
 .search-form {
@@ -25,4 +25,10 @@ code {
   text-align: center;
   display:flex;
   justify-content: center;
+  color: #2c387e;
+}
+
+.candidate-name {
+  text-transform: uppercase;
+  text-shadow: 1px 1px grey;
 }
