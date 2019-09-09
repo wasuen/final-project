@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.routes {
+  text-decoration: none;
+  color: black;
+}
+
+.search-form {
+  margin-left: auto;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 65%;
+  text-align: center;
+  display:flex;
+  justify-content: center;
+}
