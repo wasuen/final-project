@@ -24,15 +24,16 @@ class Firebase {
         return this.auth.createUser(email, password)
     }
 
-    doSignIn = (email, password) => {
-        return this.auth.doSignIn(email, password)
-    }
+    doSignIn = (email, password) => 
+        this.auth.signInWithEmailAndPassword(email, password)
 
-    doSignOut = (email, password) => {
-        return this.doSignOut()
-    }
-
+    doSignOut = () => this.auth.signOut()
+    
     doPasswordUpdate = password => this.auth.currentUser.updatePassword(password)
+
+    user = uid => this.db.collection('users').doc(uid)
+
+    users = () => this.db.collection('users')
 
 }
 
