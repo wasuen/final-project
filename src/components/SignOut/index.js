@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class SignOut extends Component {
-    render() {
-        return(
-            <div>SignOut</div>
-        )
-    }
-}
+import { withFirebase } from '../Firebase'
 
-export default SignOut
+const SignOut = ({ firebase }) => (
+  <button type='button' onClick={firebase.doSignOut}>
+    Sign Out
+  </button>
+)
+
+
+export default withFirebase(SignOut)
