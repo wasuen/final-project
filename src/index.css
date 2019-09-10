@@ -49,11 +49,30 @@ code {
   width: 65%
 }
 
+.comments {
+  color: #2c387e;
+}
+
 .comments-wrapper {
   width: 35%
 }
 
 .comment-submit {
-  height: 50px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  color: #2c387e;
+  text-align: center;
   align-items: center;
+}
+
+.signup-form {
+  display: flex;
+  justify-content: center;
 }

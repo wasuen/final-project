@@ -54,7 +54,7 @@ class SearchContributions extends Component {
                         Submit
                     </Button>
                   </form>
-                  
+
                   <Donut results={this.state.results} search={this.state.search} submitted={this.state.submitted}/>
                 </div>
                 <div className='comments-wrapper'>

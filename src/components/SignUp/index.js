@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+
 import { withFirebase } from '../Firebase'
 import * as ROUTES from '../../constants/routes'
 
 const SignUp = (props) => {
     return (
-        <div>
-            <h1>SignUp</h1>
+        <div className='signup-form'>
+          <div>
+            <h3 className='signup'>SignUp</h3>
             <SignUpForm setUserId = {props.setUserId}/>
+          </div>
         </div>
     )
 }
@@ -63,36 +68,56 @@ class SignUpFormBase extends Component {
             email === '' ||
             username === ''
       return(
-        <form onSubmit={this.onSubmit}>
-          <input
+        <form className='signup' onSubmit={this.onSubmit}>
+          <TextField 
+            label='Username'
             name='username'
             value={username}
             onChange={this.onChange}
             type='text'
             placeholder='Full Name'
+            margin="normal"
+            variant="outlined"
+            style={{margin: "0"}}
           />
-          <input
+          <br />
+          <TextField
+            label='Email'
             name='email'
             value={email}
             onChange={this.onChange}
             type='text'
             placeholder='Email'
+            margin="normal"
+            variant="outlined"
+            style={{margin: "0"}}
           />
-          <input
+          <br />
+          <TextField 
+            label='Password One'
             name='passwordOne'
             value={passwordOne}
             onChange={this.onChange}
             type='password'
             placeholder='Password'
+            margin="normal"
+            variant="outlined"
+            style={{margin: "0"}}
           />
-          <input
+          <br />
+          <TextField 
+            label='Password Two'
             name='passwordTwo'
             value={passwordTwo}
             onChange={this.onChange}
             type='password'
             placeholder='Confirm Password'
+            margin="normal"
+            variant="outlined"
+            style={{margin: "0"}}
           />
-          <button type='submit' disabled={isInvalid}>Sign Up</button>
+          <br />
+          <Button type='submit' variant="outlined" disabled={isInvalid}>Sign Up</Button>
           {error && error.message}
         </form>
       )

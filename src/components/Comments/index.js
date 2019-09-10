@@ -14,6 +14,7 @@ const useStyles = makeStyles(theme => ({
     textField: {
       marginLeft: theme.spacing(1),
       marginRight: theme.spacing(1),
+      width: 350,
     },
     dense: {
       marginTop: theme.spacing(2),
@@ -34,21 +35,30 @@ export default function TextFields() {
   };
 
   return (
-    <form className={classes.container} noValidate autoComplete="off">
-      <TextField
-        id="outlined-multiline-static"
-        label="Comments"
-        multiline
-        rows="4"
-        className={classes.textField}
-        onChange={handleChange('comment')}
-        margin="normal"
-        variant="outlined"
-      />
-      <Button className='comment-submit' type='submit' variant="outlined">
-        Submit
-      </Button>
-    </form>
+
+      <div className='comment-submit'>
+          <h3 className='comments'>Comments</h3>
+        <form className={classes.container} noValidate autoComplete="off">
+        <TextField
+            id="outlined-multiline-static"
+            label="Comments"
+            multiline
+            rows="6"
+            className={classes.textField}
+            onChange={handleChange('comment')}
+            margin="normal"
+            variant="outlined"
+        />
+        </form>
+        <br />
+        <Button className='comment-submit-button' type='submit' variant="outlined">
+            Submit
+        </Button>
+        <br/>
+        <div>
+            User Comments
+        </div>
+      </div>
   );
 }
 
