@@ -32,7 +32,6 @@ class App extends Component {
         return (
             <div>
                 <Navigation authUser={this.state.authUser}/>
-                <hr />
                 <Switch>
                     <Route exact path = {ROUTES.SEARCH_CONTRIBUTIONS} render ={() => <SearchContributions />} />
                     <Route exact path = {ROUTES.SEARCH_DISBURSEMENTS} render ={() => <SearchDisbursements />} />

@@ -1,8 +1,6 @@
 .canvas{
-    border: 1px solid #2c387e;
-    margin-left: auto;
+    border: 1px solid grey;
     margin-right: 10px;
-    width: 55%;
     text-align: center;
     border-radius: 2.5px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);

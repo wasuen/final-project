@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Donut from '../Donut'
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Comments from '../Comments'
 
 
 
@@ -42,24 +43,28 @@ class SearchDisbursements extends Component {
     render() {
         console.log(this.state)
         return (
-          <div>
-            <h3 className='search-form'>Search Disbursements by Candidate</h3>
-            <form className='search-form' onSubmit={this.getCandidate}>
-              <TextField 
-              label="candidate"
-              name='search' 
-              type='text' 
-              onChange={this.onChange}
-              margin="normal"
-              variant="outlined"
-              style={{margin: "0"}}
-              />
-              {`    `}
-              <Button type='submit' variant="outlined">
-                Submit
-              </Button>
-            </form>
-            <Donut results={this.state.results} search={this.state.search} submitted={this.state.submitted} />
+          <div className='form-wrapper'>
+            <div className='chart-wrapper'>
+              <h3 className='search-form'>Search Disbursements by Candidate</h3>
+              <form className='search-form' onSubmit={this.getCandidate}>
+                <TextField 
+                label="candidate"
+                name='search' 
+                type='text' 
+                onChange={this.onChange}
+                margin="normal"
+                variant="outlined"
+                style={{margin: "0"}}
+                />
+                <Button type='submit' variant="outlined">
+                  Submit
+                </Button>
+              </form>
+              <Donut results={this.state.results} search={this.state.search} submitted={this.state.submitted} />
+            </div>
+            <div className='comments-wrapper'>
+              <Comments />
+            </div>
           </div>
         )
     }

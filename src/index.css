@@ -18,11 +18,8 @@ code {
 }
 
 .search-form {
-  margin-left: auto;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  width: 55%;
   text-align: center;
+  margin-bottom: 10px;
   display:flex;
   justify-content: center;
   color: #2c387e;
@@ -40,4 +37,23 @@ code {
   width: 64%;
   color: #2c387e;
   justify-content: center;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.chart-wrapper {
+  width: 65%
+}
+
+.comments-wrapper {
+  width: 35%
+}
+
+.comment-submit {
+  height: 50px;
+  align-items: center;
 }
