@@ -62,7 +62,7 @@ class SignInFormBase extends Component {
           value={password}
           onChange={this.onChange}
           placeholder='Password'
-          placeholder='Email Address'
+          placeholder='Password'
           margin="normal"
           variant="outlined"
           style={{margin: "0"}}

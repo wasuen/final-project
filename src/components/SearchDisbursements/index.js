@@ -12,7 +12,8 @@ class SearchDisbursements extends Component {
         results: [],
         search: '',
         submitted: '',
-        errorMessage:''
+        errorMessage:'',
+        component:'disbursement',
     }
 
     onChange = (e) => {
@@ -63,7 +64,7 @@ class SearchDisbursements extends Component {
             </div>
             <div className='comments-wrapper'>
                   {
-                    this.props.authUser ? <Comments /> : null
+                    this.props.authUser && this.state.submitted ? <Comments authUser={this.props.authUser} component={this.state.component} candidate={this.state.submitted} /> : null
                   }
             </div>
           </div>
