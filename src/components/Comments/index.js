@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     },
   }));
 
-export default function TextFields() {
+export default function TextFields(props) {
   const classes = useStyles();
   const [values, setValues] = React.useState({
     comment:'',
@@ -61,5 +61,3 @@ export default function TextFields() {
       </div>
   );
 }
-
-

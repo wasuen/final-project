@@ -41,7 +41,6 @@ class SearchDisbursements extends Component {
 
 
     render() {
-        console.log(this.state)
         return (
           <div className='form-wrapper'>
             <div className='chart-wrapper'>
@@ -63,7 +62,9 @@ class SearchDisbursements extends Component {
               <Donut results={this.state.results} search={this.state.search} submitted={this.state.submitted} />
             </div>
             <div className='comments-wrapper'>
-              <Comments />
+                  {
+                    this.props.authUser ? <Comments /> : null
+                  }
             </div>
           </div>
         )

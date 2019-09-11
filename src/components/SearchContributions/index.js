@@ -58,7 +58,9 @@ class SearchContributions extends Component {
                   <Donut results={this.state.results} search={this.state.search} submitted={this.state.submitted}/>
                 </div>
                 <div className='comments-wrapper'>
-                  <Comments />
+                  {
+                    this.props.authUser ? <Comments authUser={this.props.authUser} /> : null
+                  }
                 </div>
               </div>
         )

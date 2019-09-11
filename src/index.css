@@ -76,3 +76,8 @@ code {
   display: flex;
   justify-content: center;
 }
+
+.signin-link {
+  text-decoration: none;
+  color: black;
+}

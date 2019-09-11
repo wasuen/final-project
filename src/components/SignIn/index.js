@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import { withRouter, NavLink } from 'react-router-dom'
 
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+
 import { withFirebase } from '../Firebase'
 import * as ROUTES from '../../constants/routes'
 
 const SignIn = () => (
   <div>
-    <h1>SignIn</h1>
+    <h3 className='signup'>SignIn</h3>
     <SignInForm />
     <SignUpLink />
   </div>
@@ -39,22 +42,33 @@ class SignInFormBase extends Component {
     const { email, password, error } = this.state
     console.log(this.props)
     return (
-      <form onSubmit={this.onSubmit}>
-        <input 
+      <form className='signup' onSubmit={this.onSubmit}>
+        <TextField
+          label='Email'
           name='email'
           type='text'
           value={email}
           onChange={this.onChange}
           placeholder='Email Address'
+          margin="normal"
+          variant="outlined"
+          style={{margin: "0"}}
         />
-        <input 
+        <br/>
+        <TextField 
+          label='Password'
           name='password'
           type='password'
           value={password}
           onChange={this.onChange}
           placeholder='Password'
+          placeholder='Email Address'
+          margin="normal"
+          variant="outlined"
+          style={{margin: "0"}}
         />
-        <button type='submit'>sign in</button>
+        <br/>
+        <Button type='submit' variant="outlined">Sign In</Button>
         {error && error.message}
       </form>
     )
@@ -64,8 +78,9 @@ class SignInFormBase extends Component {
 const SignInForm = withRouter(withFirebase(SignInFormBase))
 
 const SignUpLink = () => (
-  <p>
-    Don't have an account? <NavLink exact to={ROUTES.SIGN_UP}>Sign Up</NavLink>
+  <p className='signup'>
+    Don't have an account? 
+    <Button variant="outlined"><NavLink className="signin-link" exact to={ROUTES.SIGN_UP}>Sign Up</NavLink></Button>
   </p>
 )
 
