@@ -12,6 +12,8 @@ The intended use for this app was initially purely for data visualization. As de
 * React
 * Material UI
 * Firebase/Firestore
+* OpenFEC API
+* Git/Github
 
 ### https://my-ga-final-project.firebaseapp.com/home
 
